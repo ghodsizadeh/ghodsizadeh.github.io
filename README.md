@@ -6,7 +6,7 @@
 
 
 ## Find me around the web 🌎: 
-- Learning in public on [![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/channel/UCF3v_GwH3Jg2c-V3hRwmcbg) or <a href="https://earnwithmehdi.ir">learnwithmehdi.ir</a> 📹 ✍🏾
+- Learning in public on [![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/channel/UCF3v_GwH3Jg2c-V3hRwmcbg) or <a href="https://learnwithmehdi.ir">learnwithmehdi.ir</a> 📹 ✍🏾
 
 - Sharing updates on <a href="https://twitter.com/mghodsizadeh/"><img src='https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white'/></a>
 
