@@ -66,6 +66,7 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     output: 'export',
+    basePath: '/ghodsizadeh', // for GitHub Pages
     images: {
       unoptimized: true,
       remotePatterns: [
