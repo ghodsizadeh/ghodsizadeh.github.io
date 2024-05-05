@@ -7,20 +7,19 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Youtube Channel',
+    description: `A youtube channel that I create videos about software development and programming for economics and
+     finance in Farsi.`,
+    imgSrc: '/static/images/lwm-logo.png',
+    href: 'https://www.youtube.com/@learnwithmehdi8987',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    title: 'Tehran Stocks (Python Package)',
+    description: `
+    A python package that I created to get the latest and historical information from Tehran Stock Exchange.
+    For traders and researchers who want to analyze the Tehran Stock Exchange data.`,
     imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    href: 'https://github.com/ghodsizadeh/tehran-stocks',
   },
 ]
 
