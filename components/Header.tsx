@@ -20,7 +20,7 @@ const Header = () => {
                 alt={siteMetadata.headerTitle}
                 width={40}
                 height={40}
-                className="w-10 h-10 rounded-full"
+                className="h-10 w-10 rounded-full"
               />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
