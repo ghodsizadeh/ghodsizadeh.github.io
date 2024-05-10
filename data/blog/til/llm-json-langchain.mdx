@@ -1,0 +1,74 @@
+---
+title: 'TIL: How to Parse LLM Models to JSON with LangChain'
+date: '2024-05-10'
+tags: ['til', 'langchain', 'llm']
+draft: false
+summary: 'TIL how can I use LangChain to parse LLM models to JSON'
+---
+
+## JSON Output
+Being able to get a valid JSON could be a useful approach to get responses 
+from the LLM model and use it in your application or in your project.
+
+LangChain provides an easy intuitive way to parse the LLM model to JSON using 
+[Pydantic](https://docs.pydantic.dev/latest/).
+model = ChatOpenAI(temperature=0)
+
+
+### Example
+It's from [LangChain Documentation](https://python.langchain.com/v0.1/docs/modules/model_io/output_parsers/types/json/)
+with a little modification.
+
+```python
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.pydantic_v1 import BaseModel, Field
+from langchain_openai import ChatOpenAI
+
+
+# ------
+# Define your desired data structure.
+class NutritionFacts(BaseModel):
+    ingredients: list[str] = Field(
+        description="List of ingredients to extract nutrition facts from"
+    )
+
+    calories: int = Field(description="Calories in kcal")
+    fat: int = Field(description="Fat in grams")
+    carbs: int = Field(description="Carbs in grams")
+    protein: int = Field(description="Protein in grams")
+
+
+# ------
+
+
+food_query = "What is the nutrition facts of a nutella and banana toast?"
+model = ChatOpenAI(temperature=0)
+prompt = ChatPromptTemplate.from_messages(
+    [
+        (
+            "system",
+            "You are an expert food analyzer, provide nutrition facts of the food",
+        ),
+        ("user", "{text}"),
+    ]
+)
+chain = prompt | model.with_structured_output(
+    schema=NutritionFacts, method="function_calling"
+)
+
+
+res = chain.invoke({"text": food_query})
+print(res)
+
+```
+
+
+
+
+
+The interesting part is that you can define your own data structure and you can add detailed descriptions to your fields.
+You can use this template to provide solution for different problems like:
+- Extracting nutrition facts from a food(As what I did in the example 😁)
+- Create json response for chatbots
+- Classification of error messages components and even fix suggestions.
+- And many more...
